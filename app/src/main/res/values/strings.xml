@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Movieku</string>
+    <string name="judul_avatar">Avatar (The Way Of Water)</string>
+    <string name="sinopsis_avatar">Jake Sully tinggal bersama keluarga barunya yang terbentuk di bulan ekstrasurya Pandora.</string>
+    <string name="avatar_detail">Jake Sully tinggal bersama keluarga barunya yang terbentuk di bulan ekstrasurya Pandora.\nSetelah ancaman akrab kembali untuk menyelesaikan apa yang sebelumnya dimulai, Jake harus bekerja dengan Neytiri dan pasukan ras Navi untuk melindungi rumah mereka.</string>
+    <string name="judultransformer">Transformer : Rise Of The Beast</string>
+    <string name="sinopsis_transformer">Film Transformer ini masih berfokus kepada Optimus Prime. Seperti yang kita tahu,</string>
+    <string name="transformer_detail">Film Transformer ini masih berfokus kepada Optimus Prime. Seperti yang kita tahu, Optimus Prime adalah pemimpin robot-robot alien bernama Autobots. Autobots adalah robot yang dapat berubah menjadi kendaraan.</string>
+    <string name="judul_blackp">Black Panther : Wakanda Forever</string>
+    <string name="sinopsis_blackp">Black Panther Wakanda Forever mengisahkan kehidupan warga Wakanda yang semula bahagia dan</string>
+    <string name="blackp_detail">Black Panther Wakanda Forever mengisahkan kehidupan warga Wakanda yang semula bahagia dan penuh sukacita berubah menjadi kesedihan. Wakanda yang indah pun berubah menjadi lautan api bak neraka setelah kepergian pemimpin yang menjadi superhero Wakanda, TChalla.</string>
+    <string name="judul_blacka">Black Adam and Honky Pete</string>
+    <string name="sinopsis_blacka">Black Adam mendapat kekuatan super melalui pemberian dari para Dewa Mesir kuno</string>
+    <string name="blacka_detail">Black Adam mendapat kekuatan super melalui pemberian dari para Dewa Mesir kuno. Kekuatan tersebut dapat ditujukan untuk menegakkan keadilan, namun Black Adam justru menyalahgunakannya. Black Adam dikisahkan memiliki seorang anak. Namun, anaknya terbunuh akibat suatu peristiwa. Itu yang lantas membuat Black Adam murka. Black Adam pun menggunakan kekuatannya untuk balas dendam atas kematian anaknya.</string>
+    <string name="judul_wednesday">WEDNESDAY</string>
+    <string name="sinopsis_wednesday">Wednesday ini mengisahkan misteri supernatural yang memetakan tahun-tahun Wednesday Addmas sebagai siswa di Nevermore Academy</string>
+    <string name="wednesday_detail">Wednesday ini mengisahkan misteri supernatural yang memetakan tahun-tahun Wednesday Addmas sebagai siswa di Nevermore Academy. Di sekolah tersebut, Wednesday mencoba untuk menguasai kemampuan psikisnya yang muncul, menggagalkan pembunuhan mengerikan yang telah meneror kota setempat. Oleh karenanya ia pun ingin terlibat dalam memecahkan misteri pembunuhan yang rupanya melibatkan orang tuanya 25 tahun yang lalu, sambil menavigasi hubungan baru dan sangat kusut di Nevermore.</string>
+    <string name="judul_pino">PINOCCHIO</string>
+    <string name="sinopsis_pino">Film ini akan berkisah perjalanan hidup boneka kayu bernama Pinocchio. Meski hanya sebuah boneka,</string>
+    <string name="pino_detail">Film ini akan berkisah perjalanan hidup boneka kayu bernama Pinocchio. Meski hanya sebuah boneka, Pinocchio berusaha menjadi anak laki-laki sesungguhnya dengan melewati berbagai petualangan.</string>
+    <string name="judul_big4">The Big 4</string>
+    <string name="sinopsis_big4">The Big 4 berkisah mengenai seorang polisi berhati lurus bersama Dina. Ia memutuskan pergi ke pulau terpencil untuk menyelidiki </string>
+    <string name="big4_detail">The Big 4 berkisah mengenai seorang polisi berhati lurus bersama Dina. Ia memutuskan pergi ke pulau terpencil untuk menyelidiki kematian ayahnya, Petrus. Sesampainya di pulau tersebut, ia bertemu dan terpaksa bekerja sama dengan empat pembunuh bayaran yang sudah pensiun, yaitu Topan, Jenggo, Alpha, dan Pelor. Mereka bersatu untuk melawan seorang pembunuh berdarah dingin yang ternyata juga membunuh Petrus.</string>
+    <string name="judul_alice">Alice in Borderland 2</string>
+    <string name="sinopsis_alice">Untuk bertahan hidup dalam dunia game di Borderland, Arisu dan Usagi yang berhasil memenangkan permainan numbered cards,</string>
+    <string name="alice_detail">Untuk bertahan hidup dalam dunia game di Borderland, Arisu dan Usagi yang berhasil memenangkan permainan numbered cards, kini pada lanjutannya harus berhadapan dengan face cards yang lebih kuat. Level makin tinggi membuat bahaya yang mereka hadapi akan makin besar dari level sebelumnya.</string>
+    <string name="judul_chain">Chainsaw Man</string>
+    <string name="sinopsis_chain">Chainsaw Man menceritakan tentang seorang pemuda yang bernama Denji. Denji hidup bersama dengan Pochita, </string>
+    <string name="chain_detail">Chainsaw Man menceritakan tentang seorang pemuda yang bernama Denji. Denji hidup bersama dengan Pochita, sang iblis dengan gergaji mesin. Kehidupan Denji sangat miris karena selain miskin dia juga harus melunasi hutang peninggalan orang tuanya.</string>
+    <string name="judul_mario">Super Mario Bros The Movie</string>
+    <string name="sinopsis_mario">Kisah The Super Mario Bros dalam perjalanan mereka melalui Kerajaan Jamur.</string>
+    <string name="mario_detail">Kisah The Super Mario Bros dalam perjalanan mereka melalui Kerajaan Jamur.</string>
+    <string name="about">\nMovieKu merupakan aplikasi yang digunakan untuk mencari informasi dan merekomendasikan film dari berbagai genre. Nama MovieKu mencerminkan personalisasi, memberikan kesan sebagai aplikasi yang dekat dengan pengguna. Aplikasi ini juga menyediakan fitur ulasan untuk membantu para pecinta film berbagi pendapat dan menemukan film terbaik sesuai minat dan selera mereka.\n.</string>
+
+</resources>

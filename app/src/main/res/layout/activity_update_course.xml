@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    android:padding="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UpdateCourseActivity"
+    android:background="@color/berlin">
+
+    <ImageView
+        android:layout_gravity="center"
+        android:src="@drawable/logo2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="Update or Delete?"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:fontFamily="cursive"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:background="@drawable/shape"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_person_24"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+            <EditText
+                android:id="@+id/idEdtCourseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Nama" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/shape"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_videocam_24"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+                <EditText
+                    android:id="@+id/idEdtCourseDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:hint="Judul Film" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/shape"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_email_24"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+                <EditText
+                    android:id="@+id/idEdtCourseTracks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:hint="Email" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/shape"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_border_color_24"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+                <EditText
+                    android:id="@+id/idEdtCourseDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:hint="Review" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_marginEnd="5dp"
+            android:layout_weight="20"
+            android:textColor="@color/berlin"
+            android:backgroundTint="@color/abu"
+            android:id="@+id/idBtnUpdateCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Course"
+            android:textAllCaps="false" />
+        <Button
+            android:layout_marginStart="5dp"
+            android:layout_weight="20"
+            android:textColor="@color/berlin"
+            android:backgroundTint="@color/abu"
+            android:id="@+id/idBtnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Course"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+
+</LinearLayout>

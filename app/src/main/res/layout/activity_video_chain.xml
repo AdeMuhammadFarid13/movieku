@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.flaviofaria.kenburnsview.KenBurnsView
+            android:scaleType="fitXY"
+            android:src="@drawable/chainsawman"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+        <LinearLayout
+            android:layout_marginTop="135dp"
+            android:background="@drawable/overlay"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"/>
+    </FrameLayout>
+    <TextView
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="cursive"
+        android:textSize="25sp"
+        android:textColor="@color/abu"
+        android:text="Video Trailer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <VideoView
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:id="@+id/video_chainsaw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
