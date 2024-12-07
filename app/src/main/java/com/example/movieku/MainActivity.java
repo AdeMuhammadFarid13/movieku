@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         // Show the confirmation dialog when the user tries to go back
         new AlertDialog.Builder(this)
-                .setMessage("Apakah Anda yakin ingin keluar?")
+                .setMessage("Yakin Logout?")
                 .setCancelable(false)
                 .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
