@@ -1,7 +1,5 @@
 # Aplikasi Movieku
-Project BP3
+Project Praktikum Bahasa Pemrograman 3
 
-Anggota Kelompok :
-1. Ade Muhammad Farid
-2. Faiq Haritsah Adicandra
-3. Sigit Nur Alam
+Nama : Ade Muhammad Farid
+NIM  : 20220810023
