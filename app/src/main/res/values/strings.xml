@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Movieku</string>
+    <string name="nameApp">Movieku</string>
+    <string name="subtitleNameApp">Your Personal Movie Universe</string>
+    <string name="versionApp">v1</string>
     <string name="judul_avatar">Avatar (The Way Of Water)</string>
     <string name="sinopsis_avatar">Jake Sully tinggal bersama keluarga barunya yang terbentuk di bulan ekstrasurya Pandora.</string>
     <string name="avatar_detail">Jake Sully tinggal bersama keluarga barunya yang terbentuk di bulan ekstrasurya Pandora.\nSetelah ancaman akrab kembali untuk menyelesaikan apa yang sebelumnya dimulai, Jake harus bekerja dengan Neytiri dan pasukan ras Navi untuk melindungi rumah mereka.</string>
@@ -31,6 +34,6 @@
     <string name="sinopsis_mario">Kisah The Super Mario Bros dalam perjalanan mereka melalui Kerajaan Jamur.</string>
     <string name="mario_detail">Kisah The Super Mario Bros dalam perjalanan mereka melalui Kerajaan Jamur.</string>
     v<string name="titleLogin">Welcome to Movieku</string>
-    <string name="about">\nMovieKu merupakan aplikasi yang digunakan untuk mencari informasi dan merekomendasikan film dari berbagai genre. Nama MovieKu mencerminkan personalisasi, memberikan kesan sebagai aplikasi yang dekat dengan pengguna. Aplikasi ini juga menyediakan fitur ulasan untuk membantu para pecinta film berbagi pendapat dan menemukan film terbaik sesuai minat dan selera mereka.\n.</string>
+    <string name="about">\nAde Muhammad Farid\n \n20220810023\n</string>
 
 </resources>

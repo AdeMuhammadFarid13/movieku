@@ -5,5 +5,5 @@
     <size android:width="60dp" android:height="60dp" /> <!-- Ukuran lingkaran -->
     <stroke
         android:width="2dp"
-        android:color="#CCCCCC" /> <!-- Warna dan lebar garis tepi -->
+        android:color="#ffff" /> <!-- Warna dan lebar garis tepi -->
 </shape>

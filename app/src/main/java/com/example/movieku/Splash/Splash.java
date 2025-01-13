@@ -15,53 +15,58 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.movieku.Login.LoginActivity;
+import com.example.movieku.R;  // Ensure this import is correct for resource references
 
-public class MainActivity extends AppCompatActivity {
-    private static final int SPLASH_SCREEN_DURATION = 3000; // Durasi splash screen dalam milidetik
+public class Splash extends AppCompatActivity {
+    private static final int SPLASH_SCREEN_DURATION = 3000; // Duration of the splash screen in milliseconds
 
-    // Deklarasi untuk animasi dan elemen-elemen UI
+    // Declare animations and UI elements
     private Animation topAnim, bottomAnim;
     private ImageView img;
     private TextView txtNameApp, txtSubNameApp, txtCopyright;
 
-    @RequiresApi(api = Build.VERSION_CODES.P) // Memastikan aplikasi hanya berjalan di perangkat dengan Android P atau lebih baru
+    @RequiresApi(api = Build.VERSION_CODES.P)  // Ensure this works on Android P and above
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Mengatur tampilan aplikasi menjadi fullscreen
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_main); // Menghubungkan layout dengan activity
 
-        // Memuat animasi dari resource animasi
+        // Set the application to fullscreen
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        // Set the content view to the splash screen layout
+        setContentView(R.layout.splash);
+
+        // Load animations from the resource files
         topAnim = AnimationUtils.loadAnimation(this, R.anim.top_animation);
         bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
 
-        // Menghubungkan elemen UI dengan ID yang sesuai
+        // Link UI elements with their corresponding IDs from the layout
         img = findViewById(R.id.img_logo);
         txtNameApp = findViewById(R.id.tv_nameApp);
         txtSubNameApp = findViewById(R.id.tv_sub_nameApp);
         txtCopyright = findViewById(R.id.tv_copyright);
 
-        // Menambahkan animasi pada elemen-elemen UI
+        // Apply animations to the UI elements
         img.setAnimation(topAnim);
         txtNameApp.setAnimation(bottomAnim);
         txtSubNameApp.setAnimation(bottomAnim);
         txtCopyright.setAnimation(bottomAnim);
 
-        // Menggunakan Handler untuk menunda eksekusi selama SPLASH_SCREEN (3000ms atau 3 detik)
+        // Use a handler to delay the transition to the LoginActivity
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                // Setelah durasi selesai, mengarahkan pengguna ke halaman login
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                // After the splash screen duration, navigate to LoginActivity
+                Intent intent = new Intent(Splash.this, LoginActivity.class);
 
-                // Menambahkan transisi animasi saat berpindah ke LoginActivity
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,
-                        Pair.create(img, "logo_img"),
-                        Pair.create(txtNameApp, "textnameApp"));
+                // Add transition animations for the login activity
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(Splash.this,
+                        Pair.create(img, "logo_img"),  // Shared element transition for logo
+                        Pair.create(txtNameApp, "textnameApp"));  // Shared element transition for app name
+
                 startActivity(intent, options.toBundle());
-                finish(); // Menutup activity utama agar tidak bisa kembali ke halaman splash screen
+                finish();  // Close Splash activity so the user cannot navigate back to it
             }
-        }, SPLASH_SCREEN_DURATION); // Menunggu selama 3000ms (3 detik)
+        }, SPLASH_SCREEN_DURATION); // Wait for the specified duration before transitioning
     }
 }
