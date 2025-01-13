@@ -57,27 +57,34 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:id="@+id/username_login"
-                android:hint="Username or Email"
-                app:startIconTint="@color/black">
+                android:transitionName="txt_user"
+                android:hint="Username"
+                app:startIconTint="@color/black"
+                android:textColorHint="@color/black"
+                app:hintTextColor="@color/black"
+                style="@style/LoginTextInputLayoutStyle">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:transitionName="txt_pass"
+                android:id="@+id/password_login"
                 android:hint="Password"
                 app:startIconTint="@color/black"
+                android:textColorHint="@color/black"
+                app:hintTextColor="@color/black"
                 app:passwordToggleEnabled="true"
-                app:passwordToggleTint="@color/black">
+                app:passwordToggleTint="@color/black"
+                style="@style/LoginTextInputLayoutStyle">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"

@@ -22,21 +22,25 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Registration Page"
+        android:fontFamily="@font/aliey_regular"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginBottom="20dp" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/username_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/username_login"
+        android:transitionName="txt_user"
         android:hint="Username"
-        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
-        app:boxBackgroundMode="outline">
+        app:startIconTint="@color/black"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black"
+        style="@style/LoginTextInputLayoutStyle">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txUsernameReg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -44,38 +48,44 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:transitionName="txt_pass"
+        android:id="@+id/password_login"
         android:hint="Password"
-        android:layout_marginTop="16dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
-        app:boxBackgroundMode="outline">
+        app:startIconTint="@color/black"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/black"
+        style="@style/LoginTextInputLayoutStyle">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txPasswordReg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Elemen Konfirmasi Password -->
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/con_password_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:transitionName="txt_pass"
+        android:id="@+id/con_password_layout"
         android:hint="Confirm Password"
-        android:layout_marginTop="16dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
-        app:boxBackgroundMode="outline">
+        app:startIconTint="@color/black"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/black"
+        style="@style/LoginTextInputLayoutStyle">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txConPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
