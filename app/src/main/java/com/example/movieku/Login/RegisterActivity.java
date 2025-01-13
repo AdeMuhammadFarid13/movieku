@@ -29,55 +29,50 @@ public class RegisterActivity extends AppCompatActivity {
 
         dbHelper = new DBHelper(this);
 
-        TxUsername = (EditText)findViewById(R.id.txUsernameReg);
-        TxPassword = (EditText)findViewById(R.id.txPasswordReg);
-        TxConPassword = (EditText)findViewById(R.id.txConPassword);
-        BtnRegister = (Button)findViewById(R.id.btnRegister);
+        TxUsername = findViewById(R.id.txUsernameReg);
+        TxPassword = findViewById(R.id.txPasswordReg);
+        TxConPassword = findViewById(R.id.txConPassword);
+        BtnRegister = findViewById(R.id.btnRegister);
 
-        TextView tvRegister = (TextView)findViewById(R.id.tvRegister);
+        TextView tvRegister = findViewById(R.id.tvRegister);
 
-        tvRegister.setText(fromHtml("Back to " +
-                "</font><font color='#3b5998'>Login</font>"));
+        tvRegister.setText(fromHtml("Back to </font><font color='#3b5998'>Login</font>"));
 
-        tvRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
-            }
+        tvRegister.setOnClickListener(v -> {
+            startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
         });
 
-        BtnRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String username = TxUsername.getText().toString().trim();
-                String password = TxPassword.getText().toString().trim();
-                String conPassword = TxConPassword.getText().toString().trim();
+        BtnRegister.setOnClickListener(v -> {
+            String username = TxUsername.getText().toString().trim();
+            String password = TxPassword.getText().toString().trim();
+            String conPassword = TxConPassword.getText().toString().trim();
 
+            if (username.isEmpty() || password.isEmpty()) {
+                Toast.makeText(RegisterActivity.this, "Username and Password cannot be empty", Toast.LENGTH_SHORT).show();
+            } else if (!password.equals(conPassword)) {
+                Toast.makeText(RegisterActivity.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+            } else {
                 ContentValues values = new ContentValues();
+                values.put(DBHelper.row_username, username);
+                values.put(DBHelper.row_password, password);
 
-
-                if (!password.equals(conPassword)){
-                    Toast.makeText(RegisterActivity.this, "Password not match", Toast.LENGTH_SHORT).show();
-                }else if (password.equals("") || username.equals("")){
-                    Toast.makeText(RegisterActivity.this, "Username or Password cannot be empty", Toast.LENGTH_SHORT).show();
-                }else {
-                    values.put(DBHelper.row_username, username);
-                    values.put(DBHelper.row_password, password);
-                    dbHelper.insertData(values);
-
+                long result = dbHelper.insertData(values);
+                if (result > 0) {
                     Toast.makeText(RegisterActivity.this, "Register successful", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                     finish();
+                } else {
+                    Toast.makeText(RegisterActivity.this, "Registration failed. Try again.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
-    public static Spanned fromHtml(String html){
-        Spanned result;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N){
-            result = Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY);
-        }else {
-            result = Html.fromHtml(html);
+
+    public static Spanned fromHtml(String html) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            return Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY);
+        } else {
+            return Html.fromHtml(html);
         }
-        return result;
     }
 }

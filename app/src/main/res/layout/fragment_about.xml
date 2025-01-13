@@ -14,7 +14,7 @@
         android:textSize="40dp"
         android:text="About"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <FrameLayout
         android:layout_marginBottom="35dp"
@@ -23,6 +23,7 @@
         android:layout_marginStart="35dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_marginTop="50dp"
@@ -42,20 +43,54 @@
                 android:textAlignment="center"
                 android:textColor="@color/berlin" />
 
+            <!-- Tombol Bulat -->
             <LinearLayout
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content">
 
+                <!-- Tombol WhatsApp -->
+                <ImageButton
+                    android:id="@+id/btn_whatsapp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_circle_button"
+                    android:src="@drawable/ic_whatsapp"
+                    android:scaleType="centerInside"
+                    android:contentDescription="WhatsApp" />
 
+                <!-- Tombol Instagram -->
+                <ImageButton
+                    android:id="@+id/btn_instagram"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_circle_button"
+                    android:src="@drawable/ic_instagram"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Instagram" />
+
+                <!-- Tombol Email -->
+                <ImageButton
+                    android:id="@+id/btn_email"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_circle_button"
+                    android:src="@drawable/ic_email"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Email" />
+            </LinearLayout>
         </LinearLayout>
+
         <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_marginTop="0dp"
-                android:src="@drawable/logo2"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"/>
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_profile"
+            android:layout_width="match_parent"
+            android:layout_height="125dp" />
 
     </FrameLayout>
 </FrameLayout>

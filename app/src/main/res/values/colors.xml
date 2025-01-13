@@ -10,4 +10,5 @@
     <color name="berlin">#003153</color>
     <color name="abu">#D9D9D9</color>
     <color name="gold">#ffd700</color>
+    <color name="btnLink">#3E00FF</color>
 </resources>

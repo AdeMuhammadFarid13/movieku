@@ -9,9 +9,9 @@
     android:background="@color/berlin">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:src="@drawable/logo2"
         android:layout_width="300dp"
-        android:layout_height="300dp"/>
+        android:layout_height="300dp"
+        android:src="@drawable/logo2" />
 
 
 </LinearLayout>

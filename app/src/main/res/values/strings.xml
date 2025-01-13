@@ -30,6 +30,7 @@
     <string name="judul_mario">Super Mario Bros The Movie</string>
     <string name="sinopsis_mario">Kisah The Super Mario Bros dalam perjalanan mereka melalui Kerajaan Jamur.</string>
     <string name="mario_detail">Kisah The Super Mario Bros dalam perjalanan mereka melalui Kerajaan Jamur.</string>
+    v<string name="titleLogin">Welcome to Movieku</string>
     <string name="about">\nMovieKu merupakan aplikasi yang digunakan untuk mencari informasi dan merekomendasikan film dari berbagai genre. Nama MovieKu mencerminkan personalisasi, memberikan kesan sebagai aplikasi yang dekat dengan pengguna. Aplikasi ini juga menyediakan fitur ulasan untuk membantu para pecinta film berbagi pendapat dan menemukan film terbaik sesuai minat dan selera mereka.\n.</string>
 
 </resources>

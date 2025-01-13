@@ -24,35 +24,33 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String query = "CREATE TABLE " + table_name + "(" + row_id + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + row_username + " TEXT," + row_password + " TEXT)";
+        String query = "CREATE TABLE " + table_name + "("
+                + row_id + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + row_username + " TEXT, "
+                + row_password + " TEXT)";
         db.execSQL(query);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + table_name);
+        onCreate(db);
     }
 
     //Insert Data
-    public void insertData(ContentValues values){
-        db.insert(table_name, null, values);
+    public long insertData(ContentValues values) {
+        return db.insert(table_name, null, values);
     }
 
-
-    public boolean checkUser(String username, String password){
+    //Check User
+    public boolean checkUser(String username, String password) {
         String[] columns = {row_id};
         SQLiteDatabase db = getReadableDatabase();
-        String selection = row_username + "=?" + " and " + row_password + "=?";
-        String[] selectionArgs = {username,password};
+        String selection = row_username + "=? AND " + row_password + "=?";
+        String[] selectionArgs = {username, password};
         Cursor cursor = db.query(table_name, columns, selection, selectionArgs, null, null, null);
         int count = cursor.getCount();
         cursor.close();
-        db.close();
-
-        if (count>0)
-            return true;
-        else
-            return false;
+        return count > 0;
     }
 }
