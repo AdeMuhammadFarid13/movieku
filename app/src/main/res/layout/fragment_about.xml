@@ -25,33 +25,33 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/shape"
             android:layout_width="match_parent"
-            android:layout_height="450dp">
+            android:layout_height="455dp">
 
             <!-- Kontainer Deskripsi dan Tombol -->
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:layout_marginTop="110dp"
-                android:background="@drawable/shape_about"
+                android:layout_marginTop="145dp"
                 android:padding="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <!-- Deskripsi -->
+
+                <!-- Tombol Bulat -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/about"
                     android:fontFamily="@font/fall_kingdom"
-                    android:textSize="22sp"
+                    android:text="@string/about"
                     android:textAlignment="center"
-                    android:textColor="@color/berlin" />
+                    android:textColor="@color/berlin"
+                    android:textSize="22sp" />
 
-                <!-- Tombol Bulat -->
                 <LinearLayout
                     android:layout_marginTop="20dp"
                     android:gravity="center"
@@ -92,11 +92,24 @@
                         android:scaleType="centerInside"
                         android:contentDescription="Email" />
                 </LinearLayout>
+
+                <!-- Tombol Logout -->
+                <ImageButton
+                    android:id="@+id/btn_logout"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_circle_button"
+                    android:src="@drawable/ic_logout"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Logout" />
+
             </LinearLayout>
         </LinearLayout>
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="45dp"
             android:src="@drawable/ic_profile"
             android:layout_width="match_parent"
             android:layout_height="125dp" />

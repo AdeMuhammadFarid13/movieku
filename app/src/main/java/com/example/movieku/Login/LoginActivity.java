@@ -17,7 +17,7 @@ public class LoginActivity extends AppCompatActivity {
 
     TextInputEditText TxUsername, TxPassword;
     Button BtnLogin;
-    TextView BtnSignUp;  // Ganti menjadi TextView karena itu adalah elemen dalam layout
+    TextView BtnSignUp;  // This should be TextView for SignUp
     DBHelper dbHelper;
 
     @Override
@@ -25,15 +25,15 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // Inisialisasi elemen-elemen di layout
-        TxUsername = findViewById(R.id.txUsername);
-        TxPassword = findViewById(R.id.txPassword);
-        BtnLogin = findViewById(R.id.btn_login);
-        BtnSignUp = findViewById(R.id.btn_signup); // Menggunakan TextView di sini
+        // Initialize layout elements
+        TxUsername = findViewById(R.id.et_username); // Match the ID with XML TextInputEditText
+        TxPassword = findViewById(R.id.et_password); // Match the ID with XML TextInputEditText
+        BtnLogin = findViewById(R.id.btn_login);  // This ID is correct
+        BtnSignUp = findViewById(R.id.btn_signup); // Correct TextView ID for SignUp
 
         dbHelper = new DBHelper(this);
 
-        // Listener untuk tombol Login
+        // Listener for Login Button
         BtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,10 +43,12 @@ public class LoginActivity extends AppCompatActivity {
                 if (username.isEmpty() || password.isEmpty()) {
                     Toast.makeText(LoginActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
                 } else {
+                    // Check user credentials using DBHelper
                     boolean res = dbHelper.checkUser(username, password);
                     if (res) {
                         Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                        finish(); // Close LoginActivity so it doesn't appear when back is pressed
                     } else {
                         Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
                     }
@@ -54,11 +56,11 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        // Listener untuk tombol SignUp
+        // Listener for SignUp Button (TextView)
         BtnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Mengarahkan pengguna ke halaman RegisterActivity (Sign Up)
+                // Navigate to RegisterActivity
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }

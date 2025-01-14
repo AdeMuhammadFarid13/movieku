@@ -15,11 +15,8 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String row_username = "Username";
     public static final String row_password = "Password";
 
-    private SQLiteDatabase db;
-
     public DBHelper(Context context) {
         super(context, database_name, null, 2);
-        db = getWritableDatabase();
     }
 
     @Override
@@ -37,20 +34,26 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    //Insert Data
+    // Insert Data
     public long insertData(ContentValues values) {
-        return db.insert(table_name, null, values);
+        SQLiteDatabase db = this.getWritableDatabase();
+        long result = db.insert(table_name, null, values);
+        db.close(); // Pastikan untuk menutup database setelah operasi
+        return result;
     }
 
-    //Check User
+    // Check User
     public boolean checkUser(String username, String password) {
+        SQLiteDatabase db = this.getReadableDatabase();
         String[] columns = {row_id};
-        SQLiteDatabase db = getReadableDatabase();
         String selection = row_username + "=? AND " + row_password + "=?";
         String[] selectionArgs = {username, password};
         Cursor cursor = db.query(table_name, columns, selection, selectionArgs, null, null, null);
-        int count = cursor.getCount();
-        cursor.close();
-        return count > 0;
+
+        boolean exists = cursor.getCount() > 0;
+        cursor.close(); // Pastikan untuk menutup cursor setelah selesai
+
+        db.close(); // Tutup koneksi database
+        return exists;
     }
 }

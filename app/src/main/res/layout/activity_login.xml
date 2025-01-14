@@ -30,7 +30,7 @@
             android:gravity="center"
             android:text="@string/titleLogin"
             android:textColor="@color/black"
-            android:textSize="40dp"
+            android:textSize="40sp"
             android:transitionName="textnameApp" />
 
         <TextView
@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sign In to Continue"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textColor="@color/black"
             android:transitionName="txt_sub"
             android:fontFamily="sans-serif"/>
@@ -65,16 +65,18 @@
                 style="@style/LoginTextInputLayoutStyle">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:textColor="@color/black" />
+                    android:id="@+id/et_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:transitionName="txt_pass"
+                android:layout_marginBottom="10dp"
                 android:id="@+id/password_login"
                 android:hint="Password"
                 app:startIconTint="@color/black"
@@ -85,21 +87,23 @@
                 style="@style/LoginTextInputLayoutStyle">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    android:textColor="@color/black"/>
+                    android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="@color/black"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/btn_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="LOG IN"
+                android:layout_marginBottom="5dp"
                 android:backgroundTint="@color/berlin"
+                android:text="LOG IN"
                 android:textColor="@color/white"
-                android:textStyle="bold"
-                android:layout_marginBottom="5dp"/>
+                android:textStyle="bold" />
+
             <LinearLayout
                 android:id="@+id/ll_signup"
                 android:layout_width="match_parent"
@@ -114,15 +118,15 @@
                     android:layout_height="wrap_content"
                     android:text="Don't have an Account?"
                     android:textColor="@color/black"
-                    android:textSize="15dp"/>
+                    android:textSize="15sp"/>
                 <TextView
                     android:id="@+id/btn_signup"
-                    android:layout_marginLeft="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sign Up"
-                    android:textColor="@color/btnLink"
-                    android:textSize="15dp"/>
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textColor="@color/btnLink"
+                android:textSize="15sp"/>
             </LinearLayout>
 
         </LinearLayout>

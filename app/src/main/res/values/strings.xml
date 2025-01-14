@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Movieku</string>
     <string name="nameApp">Movieku</string>
-    <string name="subtitleNameApp">Your Personal Movie Universe</string>
+    <string name="subtitleNameApp">Your Personal Movie Universe!</string>
     <string name="versionApp">v1</string>
     <string name="judul_avatar">Avatar (The Way Of Water)</string>
     <string name="sinopsis_avatar">Jake Sully tinggal bersama keluarga barunya yang terbentuk di bulan ekstrasurya Pandora.</string>
